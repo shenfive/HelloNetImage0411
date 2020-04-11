@@ -13,21 +13,22 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("start:\(Date().timeIntervalSince1970)")
         
-        do {
-            if let url = URL(string: "https://lh3.googleusercontent.com/y1P59GUBWjvQ22AhJPaVAgmsietknCIesTgo7C2uiW_4nTHn11Hfq1pLjDcJfwYccAK11A=s85"){
-                
-                
-                let imageData = try Data(contentsOf: url)
-                theImageView.image = UIImage(data: imageData)
+        DispatchQueue.global().async {
+                    do {
+                if let url = URL(string: "https://i.hexuexiao.cn/up/b3/ed/6e/8e6332873a35c13debbd84c39e6eedb3.jpg"){
+                    let imageData = try Data(contentsOf: url)
+                    DispatchQueue.main.async {
+                        self.theImageView.image = UIImage(data: imageData)
+                        print("show Image:\(Date().timeIntervalSince1970)")
+                    }
+                }
+            } catch  {
+                print(error.localizedDescription)
             }
-            
-        } catch  {
-            print(error.localizedDescription)
         }
-        
-        
-        
+        print("show View:\(Date().timeIntervalSince1970)")
         
     }
 
