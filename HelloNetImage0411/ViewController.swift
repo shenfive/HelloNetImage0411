@@ -11,20 +11,33 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var theImageView: UIImageView!
     
+    @IBOutlet weak var containerView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        
-//        theImageView.clipsToBounds = true
-//        theImageView.layer.cornerRadius = theImageView.frame.width / 2
-//        theImageView.layer.borderColor = UIColor.red.cgColor
-//        theImageView.layer.borderWidth = 2
+//
         
-        theImageView.clipsToBounds = false
-        theImageView.layer.shadowRadius = 20         //陰影
-        theImageView.layer.shadowOpacity = 0.6;
-        theImageView.layer.shadowColor = UIColor.red.cgColor
-        theImageView.layer.shadowOffset = CGSize(width: 10, height: 10)
+
+        containerView.backgroundColor = UIColor.clear
+        containerView.clipsToBounds = false
+        containerView.layer.shadowRadius = 20         //陰影
+        containerView.layer.shadowOpacity = 0.6;
+        containerView.layer.shadowColor = UIColor.red.cgColor
+        containerView.layer.shadowOffset = CGSize(width: 10, height: 10)
+
+        
+        
+        
+        theImageView.clipsToBounds = true
+        theImageView.layer.cornerRadius = theImageView.frame.width / 2
+        theImageView.layer.borderColor = UIColor.red.cgColor
+        theImageView.layer.borderWidth = 2
+        
+//        theImageView.clipsToBounds = false
+//        theImageView.layer.shadowRadius = 20         //陰影
+//        theImageView.layer.shadowOpacity = 0.6;
+//        theImageView.layer.shadowColor = UIColor.red.cgColor
+//        theImageView.layer.shadowOffset = CGSize(width: 10, height: 10)
         
         
         

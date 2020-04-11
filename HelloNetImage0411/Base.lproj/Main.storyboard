@@ -15,23 +15,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZWK-3p-5Gc">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6M-dv-TsM">
                                 <rect key="frame" x="57" y="298" width="300" height="300"/>
-                                <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZWK-3p-5Gc">
+                                        <rect key="frame" x="20" y="20" width="260" height="280"/>
+                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="P2n-SJ-fVr"/>
-                                    <constraint firstAttribute="height" constant="300" id="dZT-fB-xjn"/>
+                                    <constraint firstAttribute="width" constant="300" id="3sa-Ua-evc"/>
+                                    <constraint firstItem="ZWK-3p-5Gc" firstAttribute="top" secondItem="b6M-dv-TsM" secondAttribute="top" constant="20" symbolic="YES" id="5qI-sx-Fkv"/>
+                                    <constraint firstItem="ZWK-3p-5Gc" firstAttribute="leading" secondItem="b6M-dv-TsM" secondAttribute="leading" constant="20" symbolic="YES" id="GfT-bp-Y8D"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZWK-3p-5Gc" secondAttribute="bottom" id="hdS-pR-5YP"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZWK-3p-5Gc" secondAttribute="trailing" constant="20" symbolic="YES" id="koR-DB-mzz"/>
+                                    <constraint firstAttribute="height" constant="300" id="vJG-Vr-Ksc"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZWK-3p-5Gc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cVW-KK-XQI"/>
-                            <constraint firstItem="ZWK-3p-5Gc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nLt-6J-QO6"/>
+                            <constraint firstItem="b6M-dv-TsM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GbE-fp-vSZ"/>
+                            <constraint firstItem="b6M-dv-TsM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oxz-FD-NcF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="b6M-dv-TsM" id="Vgh-mY-kN2"/>
                         <outlet property="theImageView" destination="ZWK-3p-5Gc" id="7hr-Y5-XgD"/>
                     </connections>
                 </viewController>
