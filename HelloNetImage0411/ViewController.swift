@@ -13,6 +13,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        theImageView.clipsToBounds = true
+        theImageView.layer.cornerRadius = theImageView.frame.width / 2
+        theImageView.layer.borderColor = UIColor.red.cgColor
+        theImageView.layer.borderWidth = 2
+        
+        
+        
         print("start:\(Date().timeIntervalSince1970)")
         
         DispatchQueue.global().async {
