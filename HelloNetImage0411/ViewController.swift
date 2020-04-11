@@ -14,11 +14,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        
+//        theImageView.clipsToBounds = true
+//        theImageView.layer.cornerRadius = theImageView.frame.width / 2
+//        theImageView.layer.borderColor = UIColor.red.cgColor
+//        theImageView.layer.borderWidth = 2
         
-        theImageView.clipsToBounds = true
-        theImageView.layer.cornerRadius = theImageView.frame.width / 2
-        theImageView.layer.borderColor = UIColor.red.cgColor
-        theImageView.layer.borderWidth = 2
+        theImageView.clipsToBounds = false
+        theImageView.layer.shadowRadius = 20         //陰影
+        theImageView.layer.shadowOpacity = 0.6;
+        theImageView.layer.shadowColor = UIColor.red.cgColor
+        theImageView.layer.shadowOffset = CGSize(width: 10, height: 10)
+        
         
         
         
